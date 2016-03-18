@@ -1,0 +1,150 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  min-width:700px;
+  background: #edeff0;
+  padding: 50px 0 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+	color: #093a58;
+  font-size: 2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 0 0 rgba(150, 150, 150, 0.5);
+ }
+
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 8px;
+  color: #384047;
+}
+
+.heading h1{
+  width:100%;
+  margin-left: 2.5%;
+}
+
+p {
+  font-size: 1em;
+}
+
+.photoItem {
+  background: #e8ebc7;
+  margin: 0 auto;
+  border-radius: 5px 5px;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 0 rgba(150, 150, 150, 0.5);
+}
+.SpaceImage {
+  min-width:150px;
+  max-width:20%;
+  max-height: 160px;
+  margin: 5px 5px;
+  padding-top: 5px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+.grid-container {
+  max-width: 95%;
+  text-align:left;
+  margin: 0 auto;
+}
+.container {
+  padding-top: 5px;
+  max-width: 95%;
+  background: white;
+  margin: 0 auto 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.info {
+  width:80%;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:space-between;
+  align-items:stretch;
+  margin-left:0.25em;
+}
+
+
+/* ================================= 
+  Flex
+==================================== */
+
+.photoItem {
+  display:flex;
+  flex-flow: row nowrap;
+  align-items:stretch;
+}
+
+.info {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items:stretch;
+}
+
+.flexPara,
+.flexHeading {
+  flex: 1 100%;
+}
+
+.links {
+  flex: 1 auto;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media all and (min-width: 800px) {
+
+  body {
+    background-color: #e0e0f0;
+  }
+  .info {
+    align-content:space-between;
+  }
+  
+  .flexPara {
+      flex: 2 0px;
+      order: 2; 
+      align-self:center;
+  }
+  
+  .onAuthor {
+      order: 1;
+  }
+
+  .onFlickr { 
+      order: 3;
+  }
+}
+
+@media all and (min-width: 1200px) {
+
+  .container {
+        max-width: 1100px;
+  }
+
+}
